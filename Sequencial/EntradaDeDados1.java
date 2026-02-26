@@ -1,3 +1,4 @@
+package Sequencial;
 // entrada de dados usando a classe Scanner
 
 import java.util.Scanner;
