@@ -1,12 +1,18 @@
 package OrientacaoAoObjeto;
 
 public class BankAccount {
-    int id;
-	String clientName;
-	double balance;
+    private int id;
+	private String clientName;
+	private double balance;
+	
+	public BankAccount(int id, String clientName, double balance) {
+		this.id = id;
+		this.clientName = clientName;
+		this.balance = balance;
+	}
 	
 	public void withDraw(double value) {
-		if(value <= balance) { 
+		if(value >= balance) { 
 			balance -= value;
 		}
 	}
@@ -19,10 +25,12 @@ public class BankAccount {
 	
 	public void displayDetails() {
 		System.out.println("Dados da conta: ");
+		System.out.println("--------------------------");
 		System.out.println("Codigo .: " + id);
 		System.out.println("Nome ...: " + clientName);
 		System.out.println("Saldo ..: R$ " + balance);
+		System.out.println("--------------------------");
+
 	}
-	
-	
 }
+
