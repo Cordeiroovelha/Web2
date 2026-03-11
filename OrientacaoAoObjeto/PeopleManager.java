@@ -3,8 +3,6 @@ package OrientacaoAoObjeto;
 import java.util.ArrayList;
 import java.util.List;
 
-import OrientacaoAoObjeto.PeopleControl.Person;
-
 public class PeopleManager {
     private List<Person> peopleList;
 
