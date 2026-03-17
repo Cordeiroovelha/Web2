@@ -18,7 +18,17 @@ public class Data {
         this.valid = valid;
     }
 
+    public Data(){};
+
     // subrotinas membro
+
+    public void changeDate(int day, int month, int year){
+        this.day = day;
+        this.month = month;
+        this.year = year;
+
+        validate();
+    }
 
     public void validate(){
         valid = ((day >= 1 && day <= lastDayMonth()) &&
@@ -38,9 +48,9 @@ public class Data {
             return (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
     }
 
-    public void printDate(int day, int month, int year){
+    public void printDate(){
         String dataFormat = String.format("%02d/%02d/%d", day, month, year);
-        JOptionPane.showMessageDialog(null, dataFormat);
+        JOptionPane.showMessageDialog(null, "A data agora é: " + dataFormat);
     }
 
     // setter e getters das variaveis
