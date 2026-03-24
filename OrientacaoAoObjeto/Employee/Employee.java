@@ -1,6 +1,6 @@
 package OrientacaoAoObjeto.Employee;
 
-public class Employee {
+public abstract class Employee {
 	protected String name;
 	protected String cpf;
 
@@ -26,8 +26,6 @@ public class Employee {
 		this.cpf = cpf;
 	}
 	
-	public double calculateIncome() {
-		return 0;
-	}
+	public abstract double calculateIncome();
 	
 }
